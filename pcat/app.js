@@ -10,7 +10,7 @@ const app = express();
 
 mongoose
   .connect(
-    'mongodb+srv://burakbalci:26burak97@cluster0.peiiio3.mongodb.net/pcat-db?retryWrites=true&w=majority'
+    `mongodb+srv://burakbalci:${process.env.password}@cluster0.peiiio3.mongodb.net/pcat-db?retryWrites=true&w=majority`
   )
   .then(() => {
     console.log('Db connected!');
