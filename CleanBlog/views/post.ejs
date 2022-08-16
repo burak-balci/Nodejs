@@ -13,6 +13,11 @@
             <h2 class="subheading"><%= post.detail %></h2>
             <span class="meta">
               <%= post.dateCreated %></span>
+              <div style="display: flex; justify-content: space-between; margin-top: 40px;">
+
+                <a href="/posts/edit/<%= post._id %>">Update Post</a>
+                <a href="/posts/<%= post._id %>?_method=DELETE" onclick="return confirm('Are you sure?')">Delete Post</a>
+              </div>
           </div>
         </div>
       </div>
